@@ -1,7 +1,8 @@
-import './globals.css';
+import './globals.scss';
 import { Crushed } from 'next/font/google';
 import Image from 'next/image';
 import Link from 'next/link';
+import { ReactNode } from 'react';
 import ItemsInCart from './ItemsInCart';
 
 const crushed = Crushed({ weight: '400', subsets: ['latin'] });
@@ -11,7 +12,11 @@ export const metadata = {
   description: 'gotta catch those SlowPacks!',
 };
 
-export default function RootLayout({ children }) {
+type Props = {
+  children: ReactNode;
+};
+
+export default function RootLayout(props: Props) {
   return (
     <html lang="en">
       {/* <head>
@@ -40,7 +45,7 @@ export default function RootLayout({ children }) {
             </Link>
           </nav>
         </header>
-        {children}
+        {props.children}
         {/* <footer className="footer">
           {' '}
           <Link href="/">Impressum</Link>

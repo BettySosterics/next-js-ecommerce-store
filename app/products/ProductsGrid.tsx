@@ -2,11 +2,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { getProducts } from '../../database/products';
 
-export const metadata = {
-  title: 'Products',
-  description: 'The SlowPacks Products',
-};
-
 export default async function ProductsGrid() {
   const products = await getProducts();
   return (

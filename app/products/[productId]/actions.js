@@ -1,5 +1,4 @@
 'use server';
-
 // Case A: cookie is undefined
 // Case B: cookie is defined but have the fruit id
 // Case C: cookie is defined but doesn't have the fruit id

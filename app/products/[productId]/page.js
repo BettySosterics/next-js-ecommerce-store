@@ -2,8 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { getProductById } from '../../../database/products';
-
-// import AddToCartButton from './AddToCartButton';
+import AddToCartButton from './AddToCartButton';
 
 export async function generateMetadata({ params }) {
   const singleProduct = await getProductById(Number(params.productId));
@@ -31,7 +30,7 @@ export default async function ProductPage(props) {
       <p>{singleProduct.description}</p>€
       <p data-test-id="product-price">{singleProduct.price}</p>
       <br />
-      {/* <AddToCartButton productId={singleProduct.id} /> */}
+      <AddToCartButton productId={singleProduct.id} />
       <Link href="/products">back to all products</Link>
     </div>
   );

@@ -53,8 +53,11 @@ import { Product } from '../migrations/00000-createTableProduct';
 export const getProducts = cache(async () => {
   // return products;
   const products = await sql<Product[]>`
-SELECT * FROM products
-`;
+    SELECT
+      *
+    FROM
+      products
+  `;
   return products;
 });
 
@@ -62,12 +65,12 @@ export const getProductById = cache(async (id: number) => {
   // return products;
   const [product] = await sql<Product[]>`
     SELECT
-     *
-     FROM
+      *
+    FROM
       products
-      WHERE
-       id = ${id}
-       `;
+    WHERE
+      id = ${id}
+  `;
   return product;
 });
 // export function getProduct(id: number) {
@@ -76,11 +79,11 @@ export const getProductById = cache(async (id: number) => {
 
 export const deleteProductById = cache(async (id: number) => {
   const [product] = await sql<Product[]>`
-    DELETE FROM
-      products
+    DELETE FROM products
     WHERE
       id = ${id}
-    RETURNING *
+    RETURNING
+      *
   `;
 
   return product;
@@ -94,11 +97,22 @@ export const createProduct = cache(
     description: string,
   ) => {
     const [product] = await sql<Product[]>`
-      INSERT INTO products
-        (name, image_name, price, description)
+      INSERT INTO
+        products (
+          NAME,
+          image_name,
+          price,
+          description
+        )
       VALUES
-        (${name}, ${imageName}, ${price}, ${description})
-      RETURNING *
+        (
+          ${name},
+          ${imageName},
+          ${price},
+          ${description}
+        )
+      RETURNING
+        *
     `;
 
     return product!;
@@ -114,15 +128,16 @@ export const updateProductById = cache(
     description: string,
   ) => {
     const [product] = await sql<Product[]>`
-      UPDATE
-        products
+      UPDATE products
       SET
-        name = ${name},
+        NAME = ${name},
         image_name = ${imageName},
         price = ${price},
         description = ${description}
-      WHERE id = ${id}
-      RETURNING *
+      WHERE
+        id = ${id}
+      RETURNING
+        *
     `;
     return product;
   },
