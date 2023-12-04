@@ -1,7 +1,3 @@
-// import GenerateButton from './GenerateButton';
-// import LocalStorage from './LocalStorage';
-// import Image from 'next/image';
-
 import styles from './page.module.css';
 import ProductsGrid from './products/ProductsGrid';
 
