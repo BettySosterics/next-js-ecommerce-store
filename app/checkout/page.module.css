@@ -1,0 +1,8 @@
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Inter', sans-serif;
+  line-height: 25px;
+  background-color: black;
+  color: azure;
+}

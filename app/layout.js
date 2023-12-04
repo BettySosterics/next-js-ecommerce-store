@@ -2,8 +2,7 @@ import './globals.css';
 import { Crushed } from 'next/font/google';
 import Image from 'next/image';
 import Link from 'next/link';
-
-// import ItemsInCart from './ItemsInCart';
+import ItemsInCart from './ItemsInCart';
 
 const crushed = Crushed({ weight: '400', subsets: ['latin'] });
 
@@ -37,7 +36,7 @@ export default function RootLayout({ children }) {
             </Link>
             {/* <Link href="/thankyou">Thank You</Link> */}
             <Link href="/cart">
-              {/* <ItemsInCart data-test-id="cart-count" /> */}
+              <ItemsInCart data-test-id="cart-count" />
             </Link>
           </nav>
         </header>
