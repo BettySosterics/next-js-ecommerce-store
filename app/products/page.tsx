@@ -1,7 +1,4 @@
 import styles from './page.module.css';
-// import Image from 'next/image';
-// import Link from 'next/link';
-// import { getProducts } from '../../database/products';
 import ProductsGrid from './ProductsGrid';
 
 export const metadata = {

@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { getProductById } from '../../../database/products';
@@ -20,7 +19,7 @@ export default async function ProductPage(props) {
   return (
     <div>
       <h1>{singleProduct.name}</h1>
-      <Image
+      <img
         src={`/images/${singleProduct.imageName}.png`}
         width={200}
         height={200}

@@ -1,6 +1,5 @@
 import './globals.scss';
 import { Crushed } from 'next/font/google';
-import Image from 'next/image';
 import Link from 'next/link';
 import { ReactNode } from 'react';
 import ItemsInCart from './ItemsInCart';
@@ -31,7 +30,7 @@ export default function RootLayout(props: Props) {
         <header>
           <nav className="nav">
             <Link href="/">
-              <Image src="/images/logo.svg" alt="icon" width={50} height={50} />
+              <img src="/images/logo.svg" alt="icon" width={50} height={50} />
             </Link>
             {/* <Link href="/">Home</Link> */}
             <Link href="/products">Products</Link>

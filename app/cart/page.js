@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import { getProducts } from '../../database/products';
 import { getCookie } from '../../util/cookies';
@@ -32,7 +31,7 @@ export default async function CartPage() {
             data-test-id={`cart-product-${product.id}`}
           >
             <h3>{product.name}</h3>
-            <Image
+            <img
               src={`/images/${product.imageName}.png`}
               width={200}
               height={200}

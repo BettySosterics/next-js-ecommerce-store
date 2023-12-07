@@ -1,4 +1,3 @@
-// import { cookies } from 'next/headers';
 'use server';
 import { cookies } from 'next/headers';
 import { getCookie } from '../../util/cookies';

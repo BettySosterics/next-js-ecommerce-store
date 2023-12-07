@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import { getProducts } from '../../database/products';
 
@@ -15,7 +14,7 @@ export default async function ProductsGrid() {
               data-test-id={`product-${product.id}`}
             >
               <h3>{product.name}</h3> <br />{' '}
-              <Image
+              <img
                 src={`/images/${product.imageName}.png`}
                 alt={product.name}
                 width={200}
