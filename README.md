@@ -9,4 +9,4 @@ A Next.js ecommerce store for trading collectible turtle cards.
 - **Add products quantity to cart**
 - **Remove products quantity to cart**
 - **Check-out page**
-- **Strip API**
+- **Stripe API**
